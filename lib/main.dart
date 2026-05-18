@@ -1,7 +1,12 @@
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 
+import 'emberquest.dart';
+
 void main() {
-  final myGame = FlameGame();
-  runApp(GameWidget(game: myGame));
+  runApp(
+    const GameWidget<EmberQuestGame>.controlled(
+      gameFactory: EmberQuestGame.new,
+    ),
+  );
 }
