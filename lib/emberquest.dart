@@ -1,3 +1,4 @@
+import 'package:emberquest/actors/ember.dart';
 import 'package:flame/game.dart';
 import 'package:flame/components.dart';
 
@@ -17,5 +18,9 @@ class EmberQuestGame extends FlameGame {
     ]);
 
     camera.viewfinder.anchor = Anchor.topLeft;
+
+    var _ember = EmberPlayer(position: Vector2(128, canvasSize.y - 70));
+
+    world.add(_ember);
   }
 }
